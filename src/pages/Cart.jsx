@@ -14,14 +14,14 @@ const Cart = () => {
   return (
     <div className="flex flex-col justify-center items-center h-screen mt-[100px] mb-[50px] pt-5 pb-5 ">
       {cart.length > 0 ? (
-        <div className="flex flex-row gap-12">
+        <div className="flex flex-col md:flex-row gap-12">
           <div>
             {cart.map((item, index) => {
               return <CartItem key={item.id} item={item} itemIndex={index} />;
             })}
           </div>
 
-          <div className="flex flex-col mt-5  rounded-2xl py-3 px-5 w-[300px] justify-between ">
+          <div className="flex flex-col  mt-5  rounded-2xl py-3 px-5 max-w-[300px] justify-between ">
             <div className="flex flex-col space-y-2">
               <div className="text-green-700 font-semibold">Your Cart</div>
               <div className="text-green-800 font-bold text-3xl capitalize ">

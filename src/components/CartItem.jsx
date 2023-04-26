@@ -12,7 +12,7 @@ const CartItem = ({ item, itemIndex }) => {
   }
   return (
     <div className="flex flex-row mx-auto gap-5 mt-5pt-5 border-b-2 border-gray-500  py-5 ">
-      <div className="w-[180px]">
+      <div className=" hidden md:block w-[180px]">
         <img src={item.image} alt="" className="w-full h-full" />
       </div>
       <div className="flex flex-col space-y-5">
@@ -26,10 +26,16 @@ const CartItem = ({ item, itemIndex }) => {
             {item.description}
           </p>
         </div>
-        <div className='flex justify-between items-center'>
+        <div className="md:hidden w-[180px]">
+          <img src={item.image} alt="" className="w-full h-full" />
+        </div>
+        <div className="flex justify-between items-center">
           <p className="text-green-500 text-sm font-semibold ">${item.price}</p>
-          <button onClick={removeCart}  className='rounded-full bg-red-300 px-3 py-3' >
-            <AiTwotoneDelete className='text-red-500' />
+          <button
+            onClick={removeCart}
+            className="rounded-full bg-red-300 px-3 py-3"
+          >
+            <AiTwotoneDelete className="text-red-500" />
           </button>
         </div>
       </div>

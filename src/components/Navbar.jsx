@@ -8,7 +8,7 @@ const Navbar = () => {
   const {cart} = useSelector((state) => state)
   return (
     <>
-      <nav className="flex flex-row justify-between px-[100px] py-2 shadow-xl fixed top-0 w-full bg-slate-900 z-50">
+      <nav className="flex flex-row justify-between px-3 md:px-[100px] py-2 shadow-xl fixed top-0 w-full bg-slate-900 z-50">
         <div className="">
           <NavLink to="/">
             <img
